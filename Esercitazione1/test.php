@@ -1,8 +1,4 @@
 
-
- //==================================TRACCIA1==============================
-
-
 <?php
 
 $numero_intero = 15;
@@ -26,20 +22,6 @@ var_dump(NUMERO_INTERO);
 var_dump(NUMERO_DECIMALE);
 var_dump(STRINGA);
 var_dump(VIENI_ALLA_FESTA);
-
-
-
-
-//==================================TRACCIA 2====================================
-
-
-
-
-
-
-
-
-
 
 
 ?>
