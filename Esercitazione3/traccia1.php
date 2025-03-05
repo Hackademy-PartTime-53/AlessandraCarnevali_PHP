@@ -44,7 +44,7 @@ public static function howManyCompany(){
 
 //Creazione 5 Istanze
 Company::howManyCompany();
-$Company1 = new Company (" Aulab ", " Italia ", 50, 2000);
+$Company1 = new Company ("Aulab", " Italia ", 50, 2000);
 $Company2 = new Company ("SunsetStudios", "Los Angeles", 300, 3000);
 $Company3 = new Company ("Columbia", "Georgia", 400, 4000);
 $Comoany4 = new Company ("Paramount", "Texas", 0, 3500);
