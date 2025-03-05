@@ -53,3 +53,61 @@ Company::howManyCompany();
 
 
 
+//Creazione 5 istanze con readline
+
+/*$name1 = readline("Inserisci un nome fra: Aulab, SunsetStudio, Paramount, Columbia, Universal");
+$location1 = readline("Inserisci una location fra: Italia, Los Angeles, Georgia, Texas, California");
+$dipendenti1 = readline("Inserisci un numero di dipendeti fra: 50, 300, 400, 0, 3000");
+$salario1 = readline("Inserisci un salario fra: 2000, 3000, 4000, 3500, 4000");
+$Company1 = new Company ($name1, $location1, $dipendenti1, $salario1);
+
+Company::howManyCompany();
+
+$name2 = readline("Inserisci un nome fra: Aulab, SunsetStudio, Paramount, Columbia, Universal");
+$location2 = readline("Inserisci una location fra: Italia, Los Angeles, Georgia, Texas, California");
+$dipendenti2 = readline("Inserisci un numero di dipendeti fra: 50, 300, 400, 0, 3000");
+$salario2 = readline("Inserisci un salario fra: 2000, 3000, 4000, 3500, 4000");
+$Company2 = new Company ($name2, $location2, $dipendenti2, $salario2);
+
+Company::howManyCompany();
+
+$name3 = readline("Inserisci un nome fra: Aulab, SunsetStudio, Paramount, Columbia, Universal");
+$location3 = readline("Inserisci una location fra: Italia, Los Angeles, Georgia, Texas, California");
+$dipendenti3 = readline("Inserisci un numero di dipendeti fra: 50, 300, 400, 0, 3000");
+$salario3 = readline("Inserisci un salario fra: 2000, 3000, 4000, 3500, 4000");
+$Company3 = new Company ($name3, $location3, $dipendenti3, $salario3);
+
+Company::howManyCompany();
+
+$name4 = readline("Inserisci un nome fra: Aulab, SunsetStudio, Paramount, Columbia, Universal");
+$location4 = readline("Inserisci una location fra: Italia, Los Angeles, Georgia, Texas, California");
+$dipendenti4 = readline("Inserisci un numero di dipendeti fra: 50, 300, 400, 0, 3000");
+$salario4 = readline("Inserisci un salario fra: 2000, 3000, 4000, 3500, 4000");
+$Company4 = new Company ($name4, $location4, $dipendenti4, $salario4);
+
+Company::howManyCompany();
+
+$name5 = readline("Inserisci un nome fra: Aulab, SunsetStudio, Paramount, Columbia, Universal");
+$location5 = readline("Inserisci una location fra: Italia, Los Angeles, Georgia, Texas, California");
+$dipendenti5 = readline("Inserisci un numero di dipendeti fra: 50, 300, 400, 0, 3000");
+$salario5 = readline("Inserisci un salario fra: 2000, 3000, 4000, 3500, 4000");
+$Company5 = new Company ($name5, $location5, $dipendenti5, $salario5);
+
+Company::howManyCompany();*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
