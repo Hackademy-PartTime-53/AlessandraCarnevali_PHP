@@ -1,101 +1,117 @@
 <?php
 
 
-class Person{
-    public $name;
-    public $surname;
-    public $age;
+class Continent {
+  public $nameContinent;
 
 
-    public function __construct( $nome, $cognome, $età )
-    {
+  public function __construct($nomeContinente)
+  {
+    $this->nameContinent= $nomeContinente;
+  }
 
-        $this->name = $nome;
-        $this->surname = $cognome;
-        $this->age = $età;
-        //$this->introduceYou();
-        
-    }
 
-      public function introduceYou(){
-        echo"Ciao sono $this->name $this->surname, ed ho $this->age anni";
-    }
-   
+  public function introduceYou(){
+    echo "Mi trovo in $this->nameContinent, ";
+  }
 
 }
 
 
+class Country extends Continent {
+         public $nameCountry;
 
-//CREAZIONE NUOVA CLASSE: HARRY
-class Harry extends Person{
-       public $direct;
-
-       public function __construct($nome, $cognome, $età, $dirigere)
-       {
+         public function __construct($nomeContinente, $nomePaese)
+         {
         
-        parent::__construct($nome, $cognome, $età);
+          parent::__construct($nomeContinente);
 
-        $this->direct = $dirigere;
+          $this->nameCountry=$nomePaese;
 
-       }
-
-       //PRIMO METODO DI PRESENTAZIONE
-       /*public function introduceYou(){
-        echo"Ciao sono $this->name $this->surname, ed ho $this->age anni e sono un $this->direct\n";}*/
+         }
 
 
-        //SECONDO METODO DI PRESENTAZIONE
-        public function introduceYou()
-        {echo parent::introduceYou() . " e sono un $this->direct \n";
-        }
+         public function introduceYou()
+         {
+          echo parent:: introduceYou() . "$this->nameCountry,";
+         }
 
 }
 
 
+class Region extends Country {
+        public $nameRegion;
 
-
-
-//CREAZIONE NUOVA CLASSE: EVELYN
-class Evelyn extends Person{
-     public $act;
-     public $oscar;
-
-       public function __construct($nome, $cognome, $età, $recitare, $oscar)
-       {
-
-        parent::__construct($nome, $cognome, $età);
-
-        $this->act = $recitare;
-        $this->oscar = $oscar;
-        
-       }
-
-       public function introduceYou(){
-        echo parent:: introduceYou() . "sono un' $this->act e ho vinto un $this->oscar \n";
-    
-    }
-
-
-}
-
-
-//CREAZIONE NUOVA CLASSE: CELIA
-class Celia extends Evelyn{
-        public $Best_Actress;
-
-        public function __construct($nome, $cognome, $età, $recitare, $oscar, $Miglior_Attrice)
+        public function __construct($nomeContinente, $nomePaese, $nomeRegione)
         {
-            
-      parent::__construct($nome, $cognome, $età, $recitare, $oscar);
+          parent::__construct($nomeContinente, $nomePaese);
 
-      $this->Best_Actress = $Miglior_Attrice;
-
+          $this->nameRegion = $nomeRegione;
         }
 
+
+        public function introduceYou()
+        {
+          echo parent:: introduceYou() . "$this->nameRegion,";
+        }
+
+}
+
+
+
+class Province extends Region{
+       public $nameProvince;
+
+       public function __construct($nomeContinente, $nomePaese, $nomeRegione, $nomeProvincia)
+       {
+        parent::__construct($nomeContinente, $nomePaese, $nomeRegione);
+
+        $this->nameProvince =$nomeProvincia;
+       }
 
        public function introduceYou()
-       { echo parent:: introduceYou() . "sono un' $this->act, ho vinto $this->oscar, come $this->Best_Actress \n";
+       {
+        echo parent:: introduceYou() . "$this->nameProvince,";
        }
+
+}
+
+
+class City extends Region {
+      public $nameCity;
+
+      public function __construct($nomeContinente, $nomePaese, $nomeRegione, $nomeProvincia, $nomeCittà)
+      {
+        parent::__construct($nomeContinente, $nomePaese, $nomeRegione, $nomeProvincia);
+
+        $this->nameCity = $nomeCittà;
+      }
+
+
+      public function introduceYou()
+      {
+        echo parent:: introduceYou() . "$this->nameCity,";
+      }
+
+}
+
+
+class Street extends City{
+    public $nameStreet;
+
+    public function __construct($nomeContinente, $nomePaese, $nomeRegione, $nomeProvincia, $nomeCittà, $nomeStrada)
+    {
+      parent::__construct($nomeContinente, $nomePaese, $nomeRegione, $nomeProvincia, $nomeCittà);
+
+      $this->nameStreet = $nomeStrada;
+    }
+
+     public function introduceYou()
+     {
+      echo parent:: introduceYou() . "$this->nameStreet,";
+     }
+
+
 
 }
 
@@ -104,12 +120,16 @@ class Celia extends Evelyn{
 
 
 
-//CREAZIONE OGGETTI
-$Harry = new Harry("Harry", "Cameron", 25, "Regista");
-$Evelyn = new Evelyn("Evelyn", "Hugo", 18, "Attrice", "1 Oscar");
-$Celia = new Celia("Celia", "St.James", 17, "Attrice", "3 Oscar", "Migliore attrice protagonista e non");
+//DICHIARAZIONE OGGETTI
 
-//RICHIAMO METODO DI PRESENTAZIONE
-$Harry->introduceYou();
-$Evelyn->introduceYou();
-$Celia->introduceYou();
+$Continent = new Continent("Europa");
+$Country = new Country("Europa","Italia");
+$Region = new Region("Europa", "Italia", "Puglia");
+$Province = new Province("Europa", "Italia", "Puglia", "BA");
+$City = new City ("Europa", "Italia", "Puglia", "BA", "Bari");
+$myLocation = new Street ("Europa", "Italia", "Puglia", "BA", "Bari", "San Giorgio Martire 2D");
+
+$myLocation -> introduceYou();
+
+
+

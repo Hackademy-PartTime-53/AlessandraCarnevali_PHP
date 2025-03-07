@@ -3,7 +3,7 @@
 
 <?php
 
-class Animal{
+/*class Animal{
     public $race;
     protected $color;
     private $family;
@@ -52,7 +52,7 @@ public function setFamily($new_family){
 
 
 //CREAZIONE OGGETTI
-$Animal1 = new Animal ("Carlino", "Beige", "Cani");
+$Animal1 = new Animal ("Carlino", "Beige", "Cani");*/
 
 
 
